@@ -6,7 +6,6 @@ import { environment } from '../../../environments/environment';
 export const authInterceptor: HttpInterceptorFn = (req, next) => {
   const token = inject(AuthService).getToken();
 
-  // In production prefix /api with the full backend URL
   let apiReq = req;
   if (req.url.startsWith('/api')) {
     apiReq = req.clone({
