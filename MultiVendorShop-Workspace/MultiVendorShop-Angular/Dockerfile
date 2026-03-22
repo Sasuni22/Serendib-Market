@@ -1,19 +1,18 @@
 # ── Build stage ───────────────────────────────────────────────
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM node:20-alpine AS build
 WORKDIR /app
 
-COPY *.csproj ./
-RUN dotnet restore
+COPY package*.json ./
+RUN npm install
 
 COPY . ./
-RUN dotnet publish -c Release -o out
+RUN npm run build -- --configuration production
 
 # ── Runtime stage ─────────────────────────────────────────────
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
-WORKDIR /app
-COPY --from=build /app/out ./
+FROM nginx:alpine AS runtime
+
+COPY --from=build /app/dist/multi-vendor-shop/browser /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 10000
-ENV ASPNETCORE_URLS=http://0.0.0.0:10000
-
-ENTRYPOINT ["dotnet", "MultiVendorShop.dll"]
+CMD ["nginx", "-g", "daemon off;"]
