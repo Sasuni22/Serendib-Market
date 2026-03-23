@@ -55,8 +55,7 @@ builder.Services.AddControllers()
         opts.JsonSerializerOptions.Converters.Add(
             new System.Text.Json.Serialization.JsonStringEnumConverter());
 
-        // FIX: prevents 500 crash caused by circular references
-        // when EF Core loads Order → Customer → Orders → Customer ...
+        // Fix circular reference crash
         opts.JsonSerializerOptions.ReferenceHandler =
             System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
     });
@@ -96,9 +95,13 @@ builder.Services.AddSwaggerGen(c =>
 // ── 6. CORS ───────────────────────────────────────────────────
 builder.Services.AddCors(o =>
     o.AddPolicy("AllowAll", p =>
-        p.AllowAnyOrigin()
+        p.WithOrigins(
+            "https://gregarious-amazement-production.up.railway.app",
+            "http://localhost:4200"
+        )
          .AllowAnyHeader()
-         .AllowAnyMethod()));
+         .AllowAnyMethod()
+         .AllowCredentials()));
 
 // ═════════════════════════════════════════════════════════════
 var app = builder.Build();
@@ -208,7 +211,12 @@ app.UseSwaggerUI(c =>
     c.RoutePrefix = string.Empty;
 });
 
-app.UseHttpsRedirection();
+// Only use HTTPS redirection in development
+if (!app.Environment.IsProduction())
+{
+    app.UseHttpsRedirection();
+}
+
 app.UseCors("AllowAll");
 app.UseAuthentication();
 app.UseAuthorization();
