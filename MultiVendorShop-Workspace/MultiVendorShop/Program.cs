@@ -96,7 +96,7 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddCors(o =>
     o.AddPolicy("AllowAll", p =>
         p.WithOrigins(
-            "https://gregarious-amazement-production.up.railway.app",
+            "https://serendib-market-live.up.railway.app",
             "http://localhost:4200"
         )
          .AllowAnyHeader()
