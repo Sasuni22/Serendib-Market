@@ -8,9 +8,9 @@ A full-stack multi-vendor e-commerce platform for Sri Lankan specialty products.
 
 ## 🌐 Live Demo
 
-- **Frontend:** https://serendib-market.up.railway.app
-- **Backend API:** https://serendib-market-production.up.railway.app
-- **Swagger UI:** https://serendib-market-production.up.railway.app
+- **Frontend:** https://serendib-market-live.up.railway.app/
+- **Backend API:** https://serendib-market-production.up.railway.app/index.html
+- **Swagger UI:** https://serendib-market-production.up.railway.app/index.html
 
 ### Demo Credentials
 
