@@ -6,7 +6,7 @@ A full-stack multi-vendor e-commerce platform for Sri Lankan specialty products.
 ![Angular](https://img.shields.io/badge/Angular-17-red)
 ![Railway](https://img.shields.io/badge/Deployed-Railway-blue)
 
-## 🌐 Live Demo
+##  Live Demo
 
 - **Frontend:** https://serendib-market-live.up.railway.app/
 - **Backend API:** https://serendib-market-production.up.railway.app/index.html
