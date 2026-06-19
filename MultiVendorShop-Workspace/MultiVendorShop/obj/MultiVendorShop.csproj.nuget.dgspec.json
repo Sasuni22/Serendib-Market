@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sasuni\\Desktop\\MultiVendorShop-Workspace\\MultiVendorShop-Workspace\\MultiVendorShop\\MultiVendorShop.csproj": {}
+    "E:\\Projects\\MultiVendorShop-Workspace\\MultiVendorShop-Workspace\\MultiVendorShop\\MultiVendorShop.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sasuni\\Desktop\\MultiVendorShop-Workspace\\MultiVendorShop-Workspace\\MultiVendorShop\\MultiVendorShop.csproj": {
+    "E:\\Projects\\MultiVendorShop-Workspace\\MultiVendorShop-Workspace\\MultiVendorShop\\MultiVendorShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sasuni\\Desktop\\MultiVendorShop-Workspace\\MultiVendorShop-Workspace\\MultiVendorShop\\MultiVendorShop.csproj",
+        "projectUniqueName": "E:\\Projects\\MultiVendorShop-Workspace\\MultiVendorShop-Workspace\\MultiVendorShop\\MultiVendorShop.csproj",
         "projectName": "MultiVendorShop",
-        "projectPath": "C:\\Users\\Sasuni\\Desktop\\MultiVendorShop-Workspace\\MultiVendorShop-Workspace\\MultiVendorShop\\MultiVendorShop.csproj",
+        "projectPath": "E:\\Projects\\MultiVendorShop-Workspace\\MultiVendorShop-Workspace\\MultiVendorShop\\MultiVendorShop.csproj",
         "packagesPath": "C:\\Users\\Sasuni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sasuni\\Desktop\\MultiVendorShop-Workspace\\MultiVendorShop-Workspace\\MultiVendorShop\\obj\\",
+        "outputPath": "E:\\Projects\\MultiVendorShop-Workspace\\MultiVendorShop-Workspace\\MultiVendorShop\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sasuni\\AppData\\Roaming\\NuGet\\NuGet.Config"

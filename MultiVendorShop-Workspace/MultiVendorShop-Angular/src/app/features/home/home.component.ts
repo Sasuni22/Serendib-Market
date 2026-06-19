@@ -64,7 +64,11 @@ import { Product, Vendor } from '../../core/models/models';
             @for (p of products.slice(0,8); track p.id) {
               <a [routerLink]="['/products', p.id]" class="product-card card">
                 <div class="product-img">
-                  <div class="product-img-placeholder">{{ getCategoryIcon(p.category) }}</div>
+                  @if (p.imageUrl) {
+                    <img [src]="p.imageUrl" [alt]="p.name" class="product-real-img" />
+                  } @else {
+                    <div class="product-img-placeholder">{{ getCategoryIcon(p.category) }}</div>
+                  }
                   <span class="badge badge-teal cat-badge">{{ p.category }}</span>
                 </div>
                 <div class="product-body">
@@ -140,7 +144,8 @@ import { Product, Vendor } from '../../core/models/models';
     .products-section { padding: 56px 0; background: var(--ivory-dark); }
     .section-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 32px; flex-wrap: wrap; gap: 16px; }
     .product-card { text-decoration: none; color: var(--ink); display: block; transition: transform .2s, box-shadow .2s; &:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); } }
-    .product-img { position: relative; height: 180px; background: var(--ivory-dark); border-radius: var(--radius-lg) var(--radius-lg) 0 0; display: flex; align-items: center; justify-content: center; }
+    .product-img { position: relative; height: 180px; background: var(--ivory-dark); border-radius: var(--radius-lg) var(--radius-lg) 0 0; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .product-real-img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .product-img-placeholder { font-size: 3.5rem; opacity: .5; }
     .cat-badge { position: absolute; top: 10px; left: 10px; }
     .product-body { padding: 16px; }
