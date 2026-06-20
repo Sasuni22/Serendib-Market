@@ -196,7 +196,7 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
-// ── 8. MIDDLEWARE PIPELINE ────────────────────────────────────
+// MIDDLEWARE PIPELINE 
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
@@ -204,7 +204,7 @@ app.UseSwaggerUI(c =>
     c.RoutePrefix = string.Empty;
 });
 
-// Only use HTTPS redirection in development
+
 if (!app.Environment.IsProduction())
 {
     app.UseHttpsRedirection();
