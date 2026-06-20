@@ -1,7 +1,4 @@
-// ============================================================
-// Models/Vendor.cs
-// Represents a vendor who sells products on the platform
-// ============================================================
+
 namespace MultiVendorShop.Models;
 
 public class Vendor
