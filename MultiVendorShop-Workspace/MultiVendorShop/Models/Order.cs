@@ -1,17 +1,14 @@
-// ============================================================
-// Models/Order.cs
-// Contains Order, OrderItem, and CartItem models
-// ============================================================
+
 namespace MultiVendorShop.Models;
 
 public enum OrderStatus
 {
-    Pending,      // Order placed, awaiting vendor confirmation
-    Confirmed,    // Vendor accepted the order
-    Processing,   // Order being prepared
-    Shipped,      // Order dispatched
-    Delivered,    // Order received by customer
-    Cancelled     // Order cancelled
+    Pending,      
+    Confirmed,    
+    Processing,   
+    Shipped,       
+    Delivered,    
+    Cancelled     
 }
 
 public class Order
@@ -35,7 +32,7 @@ public class OrderItem
 {
     public int     Id        { get; set; }
     public int     Quantity  { get; set; }
-    /// <summary>Price frozen at purchase time (LKR)</summary>
+    
     public decimal UnitPrice { get; set; }
 
     public int   OrderId   { get; set; }
