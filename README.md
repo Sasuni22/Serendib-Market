@@ -1,4 +1,4 @@
-# 🛍️ Multi-Vendor Specialty Shop API
+# 🛍️ Multi-Vendor Shop
 
 A RESTful Web API built with **ASP.NET Core 7**, **Entity Framework Core**, and **SQLite** for a Multi-Vendor Specialty Shop platform.
 
