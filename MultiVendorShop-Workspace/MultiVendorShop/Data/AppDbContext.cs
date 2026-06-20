@@ -1,7 +1,4 @@
-// ============================================================
-// Data/AppDbContext.cs
-// NO HasData() seeding here — seeding is done in Program.cs
-// ============================================================
+
 using Microsoft.EntityFrameworkCore;
 using MultiVendorShop.Models;
 
