@@ -1,7 +1,4 @@
-// ============================================================
-// Models/Customer.cs
-// Represents a customer who browses and places orders
-// ============================================================
+
 namespace MultiVendorShop.Models;
 
 public class Customer
