@@ -1,7 +1,3 @@
-// ============================================================
-// Services/JwtService.cs
-// Generates signed JWT tokens for vendors and customers
-// ============================================================
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
