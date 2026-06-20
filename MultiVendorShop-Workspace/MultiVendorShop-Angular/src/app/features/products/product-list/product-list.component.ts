@@ -94,49 +94,23 @@ import { Product } from '../../../core/models/models';
     .layout { display: grid; grid-template-columns: 240px 1fr; gap: 28px; align-items: start; }
     .filters { padding: 24px; position: sticky; top: 88px; }
     .filter-title { font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 20px; }
-    .filter-group { margin-bottom: 20px; }
-    .filter-group label { display: block; font-size: .8rem; font-weight: 500; color: var(--ink-soft); margin-bottom: 8px; }
+    .filter-group { margin-bottom: 20px; label { display: block; font-size: .8rem; font-weight: 500; color: var(--ink-soft); margin-bottom: 8px; } }
     .category-list { display: flex; flex-direction: column; gap: 4px; }
-    .cat-btn { text-align: left; padding: 7px 12px; border: none; border-radius: var(--radius-md); cursor: pointer; font-family: var(--font-body); font-size: .88rem; color: var(--ink-soft); background: none; transition: all .15s; }
-    .cat-btn:hover { background: var(--ivory-dark); color: var(--ink); }
-    .cat-btn.active { background: var(--teal-dim); color: var(--teal); font-weight: 500; }
-    .price-inputs { display: flex; align-items: center; gap: 8px; }
-    .price-inputs span { color: var(--ink-faint); }
-
-    /* ── Product card ── */
-    .product-card { text-decoration: none; color: var(--ink); display: block; transition: transform .2s, box-shadow .2s; }
-    .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
-
-    /* ── Image area ── */
-    .product-img {
-      position: relative; height: 160px;
-      background: var(--ivory-dark);
-      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-      display: flex; align-items: center; justify-content: center;
-      overflow: hidden;
-    }
-    .product-img-real {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-      display: block;
-    }
+    .cat-btn { text-align: left; padding: 7px 12px; border: none; border-radius: var(--radius-md); cursor: pointer; font-family: var(--font-body); font-size: .88rem; color: var(--ink-soft); background: none; transition: all .15s; &:hover { background: var(--ivory-dark); color: var(--ink); } &.active { background: var(--teal-dim); color: var(--teal); font-weight: 500; } }
+    .price-inputs { display: flex; align-items: center; gap: 8px; span { color: var(--ink-faint); } }
+    .product-card { text-decoration: none; color: var(--ink); display: block; transition: transform .2s, box-shadow .2s; &:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); } }
+    .product-img { position: relative; height: 160px; background: var(--ivory-dark); border-radius: var(--radius-lg) var(--radius-lg) 0 0; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .product-img-real { width: 100%; height: 100%; object-fit: cover; }
     .product-img-placeholder { font-size: 3rem; opacity: .5; }
     .cat-badge { position: absolute; top: 10px; left: 10px; }
-
-    /* ── Card body ── */
     .product-body { padding: 14px; }
     .product-vendor { font-size: .72rem; color: var(--teal); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 3px; }
     .product-name { font-family: var(--font-display); font-size: 1.05rem; margin-bottom: 6px; }
     .product-desc { font-size: .8rem; color: var(--ink-faint); margin-bottom: 10px; line-height: 1.5; }
     .product-footer { display: flex; align-items: center; justify-content: space-between; }
-    .stock-badge { font-size: .7rem; font-family: var(--font-mono); color: var(--ink-faint); background: var(--ivory-dark); padding: 3px 7px; border-radius: 20px; }
-    .stock-badge.low { color: #c0392b; background: #fde8e6; }
-
-    /* ── Pagination ── */
+    .stock-badge { font-size: .7rem; font-family: var(--font-mono); color: var(--ink-faint); background: var(--ivory-dark); padding: 3px 7px; border-radius: 20px; &.low { color: #c0392b; background: #fde8e6; } }
     .pagination { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 40px; }
     .page-info { font-family: var(--font-mono); font-size: .85rem; color: var(--ink-soft); }
-
     @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } .filters { position: static; } }
   `]
 })
