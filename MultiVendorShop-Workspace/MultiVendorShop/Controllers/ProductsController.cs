@@ -1,12 +1,4 @@
-// ============================================================
-// Controllers/ProductsController.cs
-// GET    /api/products
-// GET    /api/products/{id}
-// GET    /api/products/categories
-// POST   /api/products
-// PUT    /api/products/{id}
-// DELETE /api/products/{id}
-// ============================================================
+
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
