@@ -1,10 +1,4 @@
-// ============================================================
-// Controllers/CartController.cs
-// GET    /api/cart
-// POST   /api/cart
-// DELETE /api/cart/{cartItemId}
-// DELETE /api/cart
-// ============================================================
+
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
