@@ -1,7 +1,4 @@
-// ============================================================
-// Models/Product.cs
-// Represents a product listed by a vendor
-// ============================================================
+
 namespace MultiVendorShop.Models;
 
 public class Product
