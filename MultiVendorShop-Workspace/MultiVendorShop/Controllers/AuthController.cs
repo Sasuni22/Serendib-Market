@@ -1,8 +1,4 @@
-// ============================================================
-// Controllers/AuthController.cs
-// POST /api/auth/vendor/register    POST /api/auth/vendor/login
-// POST /api/auth/customer/register  POST /api/auth/customer/login
-// ============================================================
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MultiVendorShop.Data;
