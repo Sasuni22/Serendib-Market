@@ -1,9 +1,7 @@
-// ============================================================
-// DTOs/AllDtos.cs  —  all request & response shapes
-// ============================================================
+
 namespace MultiVendorShop.DTOs;
 
-// ── Auth ──────────────────────────────────────────────────────
+
 public class VendorRegisterDto
 {
     public string ShopName { get; set; } = string.Empty;
