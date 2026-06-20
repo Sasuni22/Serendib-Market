@@ -1,12 +1,3 @@
-// ============================================================
-// Controllers/VendorsController.cs
-// GET    /api/vendors
-// GET    /api/vendors/{id}
-// PUT    /api/vendors/{id}
-// DELETE /api/vendors/{id}
-// GET    /api/vendors/{id}/products
-// GET    /api/vendors/{id}/sales
-// ============================================================
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
